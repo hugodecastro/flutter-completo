@@ -1,9 +1,10 @@
+
+import 'package:chat_firebase/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() {
   runApp(MyApp());
-  Firestore.instance.collection().document().setData({});
 }
 
 class MyApp extends StatelessWidget {
@@ -13,9 +14,11 @@ class MyApp extends StatelessWidget {
       title: 'Chat Firebase',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        iconTheme: IconThemeData(
+          color: Colors.blue
+        )
       ),
-      home: Container(),
+      home: ChatScreen(),
     );
   }
 }
